@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# [react-hn](https://trkhanh.github.io/hacker-new-react)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A [React](http://facebook.github.io/react) &
+[react-router](https://github.com/rackt/react-router)-powered implementation of
+[Hacker News](https://news.ycombinator.com) using its
+[Firebase API](https://github.com/HackerNews/API).
 
-## Available Scripts
+[![react-hn screenshot](https://github.com/trkhanh/hacker-new-react/raw/master/screenshot.png "New comment highlighting in react-hn")](https://trkhanh.github.io/hacker-new-react)
 
-In the project directory, you can run:
 
-### `yarn start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Supports display of all item types:
+  [stories](https://trkhanh.github.io/hacker-new-react/#/story/8863),
+  [jobs](https://trkhanh.github.io/hacker-new-react/#/job/8426937),
+  [polls](https://trkhanh.github.io/hacker-new-react/#/poll/126809) and
+  [comments](https://trkhanh.github.io/hacker-new-react/#/comment/8054455)
+* Basic [user profiles](https://trkhanh.github.io/hacker-new-react/#/user/patio11)
+* Collapsible comment threads, with child counts
+* "Realtime" updates (free via Firebase!)
+* Last visit details for stories are cached in `localStorage`
+* New comments are highlighted:
+  * Comments since your last visit to an item
+  * New comments which load while you're reading an item
+  * New comments in collapsed threads
+* Automatic or manual collapsing of comment threads which don't contain any new
+  comments
+* Manual highlighting of the X most recent comments to catch up on threads you were reading elsewhere
+* Stories with new comments are marked on list pages
+* Stories can be marked as read to remove highighting from new comments
+* "comments" sections driven by the Changed Items API
+* Story listing pages are cached in `sessionStorage` for quick back button usage
+  and pagination in the same session
+* Configurable settings:
+  * auto collapse - automatically collapse comment threads without new comments
+    on page load
+  * show reply links - show "reply" links to Hacker News
+  * show dead - show items flagged as dead
+  * show deleted - show comments flagged as deleted in threads
+* Delayed comment detection - so tense! Who will it be? What will they say?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Building
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install dependencies:
 
-### `yarn build`
+```
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### npm scripts
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* `npm start` - start development server
+* `npm run build` - build into the `dist/` directory
+* `npm run lint` - lint `src/`
+* `npm run lint:fix` - lint `src/` and auto-fix issues where possible
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## MIT Licensed
