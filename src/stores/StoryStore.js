@@ -125,7 +125,7 @@ class StoryStore extends EventEmitter {
         window.removeEventListener('storage', this.onStorage)
     }
 }
-
+// Todo: extend core feature of object
 // Static, cache-related functions
 extend(StoryStore, {
     /**
