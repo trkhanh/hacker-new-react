@@ -24,5 +24,20 @@
 		"scope": "javascript,html",
 		"prefix": "utils/storage",
 		"body": "var storage = require('../utils/storage').default"
-	}
+	},
+	"STORAGE_KEY": {
+		"scope": "javascript,html",
+		"prefix": "storage-key",
+		"body": "var STORAGE_KEY = '${1:storage-key-name-placeholder}'"
+	},
+	"HNService": {
+		"scope": "javascript,html",
+		"prefix": "HNService",
+		"body": "var HNService = require('../services/HNService').default"
+	},
+	"const": {
+		"scope": "javascript,html",
+		"prefix": "const-hn",
+		"body": "var { ${1} } = require('../utils/const').default"
+	},
 }
