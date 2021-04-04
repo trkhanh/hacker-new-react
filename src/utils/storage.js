@@ -1,3 +1,4 @@
+//Todo: State be set Somewhere
 export default {
   get(key, defaultValue) {
     var value = window.localStorage[key];

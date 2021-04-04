@@ -41,6 +41,9 @@ function userRef(id) {
   return api.child('user/' + id)
 }
 
+/**
+ * API: update items
+ */
 function updatesRef() {
   return api.child('updates/items')
 }

@@ -91,10 +91,10 @@ function handleUpdateItems(items) {
         }
     }
     populateUpdates()
-    UpdateStore.emit('updates', updates)
+    UpdatesStore.emit('updates', updates)
 }
 
-var UpdateStore = extend(new EventEmitter(), {
+var UpdatesStore = extend(new EventEmitter(), {
     loadSession() {
         var json = window.sessionStorage.updates
         updatesCache = (json ? JSON.parse(json) : { comment: {}, stories: {} })
